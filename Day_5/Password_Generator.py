@@ -54,16 +54,17 @@ ez_password = ""
 for x in password_sum:
     ez_password += x
     
-print(ez_password)
+print(f"Your easy password is : {ez_password}")
 
 
 #Hard Level - Order of characters randomised:
 #e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
 rand_password = random.sample(password_sum,k = total_letter)
+#didn't use the random.shuffle above as it didn't return anything and changed the original list whereas I needed the OG list as i wanted to display both easy and hard password
 
 hd_password = "".join(rand_password)
-print(hd_password)
+print(f"Your tough password is : {hd_password}")
 
 
 
