@@ -15,7 +15,7 @@ decrypted = []
 def encrypt(text,shift):
     for letter in text:
        letter_pos = alphabet.index(letter)
-       new_letter_pos = ((letter_pos + shift) % len(alphabet))
+       new_letter_pos = ((letter_pos + shift) % len(alphabet)) #find the right place to access the alphabet
        encrypted.append(alphabet[new_letter_pos])
     print(f"the encoded text is {''.join(encrypted)}")
 
