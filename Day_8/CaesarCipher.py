@@ -8,15 +8,17 @@ shift = int(input("Type the shift number:\n"))
 
 # for i in range(n = 3): # set n to desired value
 #     print(alphabet[i % len(alphabet)])
-encrypted = []
-decrypted = []
+encrypted = ""
+decrypted = ""
 
 #TODO-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
 def encrypt(text,shift):
+    # encrypted = ""
     for letter in text:
        letter_pos = alphabet.index(letter)
        new_letter_pos = ((letter_pos + shift) % len(alphabet)) #find the right place to access the alphabet
-       encrypted.append(alphabet[new_letter_pos])
-    print(f"the encoded text is {''.join(encrypted)}")
+       new_letter = alphabet[new_letter_pos]
+       encrypted += new_letter
+    print(f"the encoded text is {encrypted}")
 
 encrypt(text,shift)
